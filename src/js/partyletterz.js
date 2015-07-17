@@ -23,7 +23,21 @@
                     var imageBackground = '';
                     var imagePositions  = '';
                     var currentPosition = 0;
-                    var currentAcc      = 40;
+                    var currentAcc      = 0;
+
+                    switch (current.tagName) {
+                        case 'P':
+                            currentAcc = 20;
+                            break;
+                        case 'H1':
+                            currentAcc = 120;
+                            break;
+                        case 'H2':
+                            currentAcc = 80;
+                            break;
+                    }
+
+                    console.log(currentAcc);
 
                     for (var x = 0, txtlen = text.length; x < txtlen; x++) {
                         var char = text[x];
@@ -43,12 +57,8 @@
 
                     }
 
-                    console.log(imageBackground);
-                    console.log(imagePositions);
-
                     current.style['background-image']    = imageBackground;
                     current.style['background-position'] = imagePositions;
-
                     current.childNodes[0].nodeValue = "";
                 }
             }

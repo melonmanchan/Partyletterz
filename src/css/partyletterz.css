@@ -3,9 +3,11 @@
     background-size: contain;
 }
 h1.partyletter {
-    height: 100px;
+    height: 200px;
 }
-
+h2.partyletter {
+    height: 150px;
+}
 p.partyletter {
     height: 40px;
 }
