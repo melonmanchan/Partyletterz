@@ -8,6 +8,13 @@ h1.partyletter {
 h2.partyletter {
     height: 150px;
 }
+h3.partyletter {
+    height: 100px;
+}
+
+h4.partyletter {
+    height: 70px;
+}
 p.partyletter {
     height: 40px;
 }

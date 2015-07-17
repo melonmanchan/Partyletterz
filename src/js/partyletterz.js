@@ -33,13 +33,13 @@
                             currentAcc = 110;
                             break;
                         case 'H2':
-                            currentAcc = 90;
+                            currentAcc = 105;
                             break;
                         case 'H3':
-                            currentAcc = 80;
+                            currentAcc = 70;
                             break;
                         case 'H4':
-                            currentAcc = 70;
+                            currentAcc = 60;
                             break;
                         case 'P':
                             currentAcc = 20;
