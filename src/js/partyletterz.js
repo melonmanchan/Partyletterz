@@ -16,6 +16,8 @@
                 if (   current.tagName === 'P'
                     || current.tagName === 'H1'
                     || current.tagName === 'H2'
+                    || current.tagName === 'H3'
+                    || current.tagName === 'H4'
                     || current.tagName === 'SPAN'
                     ) {
                     var text = current.childNodes[0].nodeValue;
@@ -26,14 +28,20 @@
                     var currentAcc      = 0;
 
                     switch (current.tagName) {
-                        case 'P':
-                            currentAcc = 20;
-                            break;
                         case 'H1':
-                            currentAcc = 120;
+                            currentAcc = 110;
                             break;
                         case 'H2':
+                            currentAcc = 90;
+                            break;
+                        case 'H3':
                             currentAcc = 80;
+                            break;
+                        case 'H4':
+                            currentAcc = 70;
+                            break;
+                        case 'P':
+                            currentAcc = 20;
                             break;
                     }
 
@@ -56,7 +64,7 @@
                             }
 
                     }
-
+                    console.log(current.style['font-size']);
                     current.style['background-image']    = imageBackground;
                     current.style['background-position'] = imagePositions;
                     current.childNodes[0].nodeValue = "";
