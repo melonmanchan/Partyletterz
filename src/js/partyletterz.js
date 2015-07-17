@@ -5,10 +5,11 @@
     var PartyLetterz = {
         config: {
             version: '0.0.1',
-            imgPath:  '../img/'
+            imgPath:  '../src/img/'
         },
         partyHard: function() {
             console.log("When it's time to party we will party hard.");
+            console.log(this.config);
             var elements = doc.querySelectorAll('.partyletter');
 
             for( var i = 0, len = elements.length; i < len; i++) {
@@ -45,16 +46,14 @@
                             break;
                     }
 
-                    console.log(currentAcc);
-
                     for (var x = 0, txtlen = text.length; x < txtlen; x++) {
                         var char = text[x];
                             currentPosition += currentAcc;
 
                             if (char != ' ') {
-                                imageBackground += 'url(' + "'../src/img/" + char.toUpperCase() + ".gif'" + ')';
+                                imageBackground += 'url(' + "'" + this.config.imgPath + char.toUpperCase() + ".gif'" + ')';
                             } else {
-                                imageBackground += "url('../src/img/blank.png')";
+                                imageBackground += "url('"+ this.config.imgPath +"')";
                             }
 
                             imagePositions += currentPosition + 'px 0px';
@@ -64,7 +63,7 @@
                             }
 
                     }
-                    console.log(current.style['font-size']);
+
                     current.style['background-image']    = imageBackground;
                     current.style['background-position'] = imagePositions;
                     current.childNodes[0].nodeValue = "";
