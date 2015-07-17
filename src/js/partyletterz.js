@@ -13,7 +13,6 @@
 
             for( var i = 0, len = elements.length; i < len; i++) {
                 var current = elements[i];
-
                 if (   current.tagName === 'P'
                     || current.tagName === 'H1'
                     || current.tagName === 'H2'
@@ -23,20 +22,33 @@
 
                     var imageBackground = '';
                     var imagePositions  = '';
+                    var currentPosition = 0;
+                    var currentAcc      = 40;
 
-                    for (var i = 0, txtlen = text.length; i < txtlen; i++) {
-                        var char = text[i];
-                        if (char != ' ') {
-                            imageBackground +=  'url(' + "'../src/img/" + char.toUpperCase() + ".gif'" + ')';
+                    for (var x = 0, txtlen = text.length; x < txtlen; x++) {
+                        var char = text[x];
+                            currentPosition += currentAcc;
 
-                            if (i < txtlen - 1) {
-                                imageBackground += ', ';
+                            if (char != ' ') {
+                                imageBackground += 'url(' + "'../src/img/" + char.toUpperCase() + ".gif'" + ')';
+                            } else {
+                                imageBackground += "url('../src/img/blank.png')";
                             }
-                        }
+
+                            imagePositions += currentPosition + 'px 0px';
+                            if (x < txtlen - 1) {
+                                imageBackground += ', ';
+                                imagePositions  += ', ';
+                            }
+
                     }
-                    console.log(current);
+
                     console.log(imageBackground);
-                    current.style['background-image'] = imageBackground;
+                    console.log(imagePositions);
+
+                    current.style['background-image']    = imageBackground;
+                    current.style['background-position'] = imagePositions;
+
                     current.childNodes[0].nodeValue = "";
                 }
             }
