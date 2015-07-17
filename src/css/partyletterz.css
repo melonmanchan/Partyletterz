@@ -1,0 +1,11 @@
+.partyletter {
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+h1.partyletter {
+    height: 170px;
+}
+
+p.partyletter {
+    height: 40px;
+}
