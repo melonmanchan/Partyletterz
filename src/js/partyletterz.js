@@ -30,7 +30,7 @@
 
                     switch (current.tagName) {
                         case 'H1':
-                            currentAcc = 110;
+                            currentAcc = 120;
                             break;
                         case 'H2':
                             currentAcc = 105;
