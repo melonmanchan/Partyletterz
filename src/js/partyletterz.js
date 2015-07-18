@@ -48,7 +48,6 @@
 
                     for (var x = 0, txtlen = text.length; x < txtlen; x++) {
                         var char = text[x];
-                            currentPosition += currentAcc;
 
                             if (char != ' ') {
                                 imageBackground += 'url(' + "'" + this.config.imgPath + char.toUpperCase() + ".gif'" + ')';
@@ -61,6 +60,8 @@
                                 imageBackground += ', ';
                                 imagePositions  += ', ';
                             }
+                        currentPosition += currentAcc;
+
 
                     }
 
