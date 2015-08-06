@@ -17,7 +17,11 @@
 <button type="button" id="partyButton">Start the party!</button>
 <script type="text/javascript">
     // Start the party
-    document.getElementById('partyButton').addEventListener('click', function() {PartyLetterz.partyHard();});
+    document.getElementById('partyButton').addEventListener('click', function() {
+        PartyLetterz.partyHard();
+        this.remove();
+    });
 </script>
+<iframe style="display: none;" width="560" height="315" src="http://www.youtube.com/embed/9EcjWd-O4jI?autoplay=1&t=16s" frameborder="0" allowfullscreen></iframe>
 </body>
 </html>
