@@ -9,7 +9,6 @@
         },
         partyHard: function() {
             console.log("When it's time to party we will party hard.");
-            console.log(this.config);
             var elements = doc.querySelectorAll('.partyletter');
 
             for( var i = 0, len = elements.length; i < len; i++) {
