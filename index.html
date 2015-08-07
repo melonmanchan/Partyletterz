@@ -21,8 +21,11 @@
         PartyLetterz.config.imgPath = 'src/img/';
         PartyLetterz.partyHard();
         this.remove();
+        var iframe = document.createElement('iframe');
+        iframe.style.display = "none";
+        iframe.src = "https://www.youtube.com/embed/ifoy6_nARUc?rel=0&autoplay=1";
+        document.body.appendChild(iframe);
     });
 </script>
-<iframe style="display: none;" width="560" height="315" src="http://www.youtube.com/embed/9EcjWd-O4jI?autoplay=1&t=16s" frameborder="0" allowfullscreen></iframe>
 </body>
 </html>
